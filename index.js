@@ -10,17 +10,17 @@ var imagesArray = [
 
 function dicee () {
     var randomNumber1 = Math.floor(Math.random() * imagesArray.length);
-    document.querySelector(".img1").src = imagesArray[randomNumber1];
+    document.querySelector(".img1").setAttribute("src", imagesArray[randomNumber1]);
     
     var randomNumber2 = Math.floor(Math.random() * imagesArray.length);
-    document.querySelector(".img2").src = imagesArray[randomNumber2];
+    document.querySelector(".img2").setAttribute("src", imagesArray[randomNumber2]);
 
     var heading = document.querySelector('h1');
     if (randomNumber1 > randomNumber2) {
         heading.innerText = "Player 1 Wins";
     } else if (randomNumber1 < randomNumber2) {
         heading.innerText = "Player 2 Wins";
-    } else if (randomNumber1 === randomNumber2) {
+    } else {
         heading.innerText = "Draw";
     }
 };        
